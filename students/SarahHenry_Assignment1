@@ -1,0 +1,20 @@
+int startTime = millis();
+int secondTime = 2000;//will later convert milliseconds to 2 seconds--so the grammer makes sense :)
+float count;
+
+void setup() {
+  size(900,900);
+  background(125);
+  frameRate(1);
+
+}
+
+void draw() {
+  count = ((millis() - startTime))/1000; // this is the timer
+  String Es = round(count) + " seconds of your time have gone by"; //concatenates the timer with text
+int passedTime = millis() - startTime; // measures the time that has gone by
+if (passedTime > secondTime)  { //starts timer at two seconds
+  fill(random(255)); //varies the color of the text
+text(Es, random(width), random(height), 250, 200); //displays string of text at varying places in the page
+}
+}
