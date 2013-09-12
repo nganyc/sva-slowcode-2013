@@ -1,10 +1,10 @@
-int startY=0;
+
 
 void setup(){
   
   background(0,0,0);
   size(800,500);
-  frameRate(1);
+  
 
 }
 
