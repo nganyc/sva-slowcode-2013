@@ -34,7 +34,7 @@ void draw(){
 }
 
 /* 
-   PROBLEMS:
+   PROBLEMS WORKING ON IT:
    1. Not sure about what the map() means and how to set each of the Parameters in this case;
    
    2. When second() back to 0 when finishing a circle, 
@@ -44,5 +44,5 @@ void draw(){
       
       (2)the layer order of the 3 circles has bugs which I've no idea why;
    
-   4. If I change the opacity of each circle, some bugs happen (about the layer order);
+   3. If I change the opacity of each circle, some bugs happen (about the layer order);
 */
