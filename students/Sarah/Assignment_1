@@ -1,5 +1,5 @@
 int startTime = millis();
-int secondTime = 2000;//will later convert milliseconds to 2 seconds--so the grammer makes sense :)
+int secondTime = 2000;//will later convert milliseconds to 2 seconds--so the grammar of the output makes sense :)
 float count;
 
 void setup() {
