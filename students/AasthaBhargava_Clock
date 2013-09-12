@@ -1,4 +1,3 @@
-int startY=0;
 
 void setup(){
   
