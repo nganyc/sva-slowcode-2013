@@ -1,0 +1,17 @@
+void setup(){
+  size(500,500);
+  noStroke();
+}
+
+void draw(){
+  background(#FFFFFF);
+  float s=map(second(), 0, 60, 90, 270);
+  stroke(0,200,255);
+  strokeWeight(10);
+  arc(250, 250, 300, 300, 0, radians(s), OPEN);
+  
+  arc(250, 250, 100, 100, 0, radians(s), OPEN);
+
+  
+  
+}
