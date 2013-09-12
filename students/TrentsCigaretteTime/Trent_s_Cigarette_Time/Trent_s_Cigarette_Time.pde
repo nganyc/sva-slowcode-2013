@@ -49,7 +49,7 @@ void draw(){
   
   // Smoke Cloud 1
   fill(l % 255);
-  ellipse(520,height/2,h+7,h+7);
+  ellipse(520,height/2,h,h);
   
   // Smoke Cloud 2
   fill(l % 255);
