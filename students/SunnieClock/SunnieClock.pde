@@ -1,13 +1,11 @@
 void setup(){
   
   size(300, 300);        //set background
-  background(255,218,5);
   
 }
 
 void draw(){
   
-  size(300, 300);        //set background
   background(255,218,5);
   
   noFill();
