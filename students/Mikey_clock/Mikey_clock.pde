@@ -13,7 +13,7 @@ void draw() {
   ellipse(300, 300, s, s);
   
   fill(247, 255, 0, 120);
-  float m = map(minute(), 0, 59, 50, 200);
+  float m = map(minute(), 0, 59, 20, 200);
   rect(300, 300, m, m);
   
   fill(4, 255, 63, 120);
