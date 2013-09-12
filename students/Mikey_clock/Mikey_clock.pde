@@ -17,7 +17,7 @@ void draw() {
   rect(300, 300, m, m);
   
   fill(4, 255, 63, 120);
-  float h = map(hour(), 0, 59, 80, 200);
+  float h = map(hour(), 0, 59, 30, 200);
   ellipse(270, 270, h, h);
   
   
