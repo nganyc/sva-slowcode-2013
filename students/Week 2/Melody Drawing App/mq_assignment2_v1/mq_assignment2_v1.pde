@@ -10,6 +10,8 @@ color c8;
 PFont font;
 
 
+
+
 void setup (){
   size(800,800);
   font = loadFont("MyriadPro-Bold-48.vlw");
@@ -22,6 +24,7 @@ void setup (){
   c6 = color(#FFFFFF);
   c7 = color(#99FF33);
   c8 = color(#3399FF);
+
 
 }
 
