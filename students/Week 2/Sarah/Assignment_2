@@ -1,0 +1,51 @@
+int robotHeight;//276, in original sketch
+int robotWidth;//155, in original sketch
+
+
+void setup(){
+size(800, 900);
+smooth();
+strokeWeight(2);
+background(204);
+frameRate(10);
+}
+void draw(){
+robotHeight = height/2;
+robotWidth = width/2;
+ellipseMode(RADIUS);
+// Processing Robot Example--Antennae
+line(robotWidth, robotHeight, robotHeight-30, robotWidth-43); // Small
+line(robotWidth, robotHeight, robotHeight+40, robotWidth-99); // Tall
+line(robotWidth, robotHeight, robotHeight+66, robotWidth+15); // Medium
+// Processing Robot Example--Head
+fill(0); // Set fill to black
+ellipse(robotWidth, robotHeight, 45, 45); // Head
+fill(255); // Set fill to white
+ellipse(robotWidth+8, robotHeight-5,  14, 14); // Large eye
+fill(0); // Set fill to black
+ellipse(robotWidth+8, robotHeight-5,  3, 3); // Pupil
+fill(153); // Set fill to light gray
+ellipse(robotWidth-13, robotHeight-7,  5, 5); // Small eye 1
+ellipse(robotWidth+20, robotHeight-15,  4, 4); // Small eye 2
+ellipse(robotWidth+29, robotHeight+7, 3, 3); // Small eye 3
+
+if(mousePressed){  
+  float weight = dist(mouseX, mouseY, pmouseX, pmouseY);//calculates the distance between the current position of the mouse and the previous positions of the mouse
+  strokeWeight(weight);//adjusts the line being drawn by using the weight variable, which shifts acoording the distance the mouse travels
+  line(mouseX, mouseY, pmouseX, pmouseY);
+  strokeWeight(5);
+  fill(255);
+}  
+if(!mousePressed){
+  if(mouseX > width/2 && mouseY < width/2){
+    filter(THRESHOLD);
+  } if(mouseX < width/2 && mouseY > width/2){
+    filter(INVERT);
+  } if(mouseX > width/2 && mouseY > width/2){
+    filter(DILATE);
+  } if(mouseX < width/2 && mouseY < width/2) {
+    filter(POSTERIZE, 2);
+  }
+}
+}
+
