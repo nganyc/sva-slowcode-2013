@@ -5,7 +5,7 @@
 
 void setup(){
 size(1000, 300);
-background(#F2F2F2);
+background(#C6C6C6);
 smooth();
 
 }
