@@ -37,13 +37,13 @@ if(mousePressed){
   fill(255);
 }  
 if(!mousePressed){
-  if(mouseX > width/2 && mouseY < width/2){
+  if(mouseX > width/2 && mouseY < height/2){//top right
     filter(THRESHOLD);
-  } if(mouseX < width/2 && mouseY > width/2){
+  } if(mouseX < width/2 && mouseY > height/2){//bottom right
     filter(INVERT);
-  } if(mouseX > width/2 && mouseY > width/2){
+  } if(mouseX > width/2 && mouseY > height/2){//bottom right
     filter(DILATE);
-  } if(mouseX < width/2 && mouseY < width/2) {
+  } if(mouseX < width/2 && mouseY < height/2) {//top left
     filter(POSTERIZE, 2);
   }
 }
