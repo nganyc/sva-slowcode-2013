@@ -8,14 +8,16 @@ color c6;
 color c7;
 color c8;
 PFont font;
+float f1;
 
 
 
 
 void setup (){
   size(800,800);
+  float f1 = width/33;
   font = loadFont("MyriadPro-Bold-48.vlw");
-  textFont(font,24);
+  textFont(font,f1);
   c1 = color(#FFFF99);
   c2 = color(#FF66B2);
   c3 = color(#99FFFF);
@@ -41,50 +43,50 @@ void draw(){
   if(!mousePressed && mouseX<width/2 && mouseY<height/2){
       stroke(c2);
       fill(c1);
-      ellipse(mouseX,mouseY+30,60,60);
+      ellipse(mouseX,mouseY+map(5,0,100,0,width),map(7,0,100,0,width),map(7,0,100,0,width));
       fill(c2);
-      text("1",mouseX-6,mouseY+36);
+      text("1",mouseX-map(.6,0,100,0,width),mouseY+map(6,0,100,0,width));
     }
     
    if(!mousePressed && mouseX>width/2 && mouseY<height/2){
       stroke(c4); 
       strokeWeight(2);
       fill(c3);
-      ellipse(mouseX,mouseY+30,60,60);
+      ellipse(mouseX,mouseY+map(5,0,100,0,width),map(7,0,100,0,width),map(7,0,100,0,width));
       fill(c4);
-      text("2",mouseX-6,mouseY+36);
+      text("2",mouseX-map(.6,0,100,0,width),mouseY+map(6,0,100,0,width));
     }
     
    if(!mousePressed && mouseX>width/2 && mouseY>height/2){
       stroke(c6);
       strokeWeight(2);
       fill(c5);
-      ellipse(mouseX,mouseY+30,60,60);
+      ellipse(mouseX,mouseY+map(5,0,100,0,width),map(7,0,100,0,width),map(7,0,100,0,width));
       fill(c6);
-      text("3",mouseX-6,mouseY+36);
+      text("3",mouseX-map(.6,0,100,0,width),mouseY+map(6,0,100,0,width));
     }
     
    if(!mousePressed && mouseX<width/2 && mouseY>height/2){
       stroke(c8);
       strokeWeight(2);
       fill(c7);
-      ellipse(mouseX,mouseY+30,60,60);
+      ellipse(mouseX,mouseY+map(5,0,100,0,width),map(7,0,100,0,width),map(7,0,100,0,width));
       fill(c8);
-      text("4",mouseX-6,mouseY+36);
+      text("4",mouseX-map(.6,0,100,0,width),mouseY+map(6,0,100,0,width));
     }
   
   if(mousePressed && mouseX<width/2 && mouseY<height/2){
     fill(c2);
     stroke(c1);
-    triangle(pmouseX, pmouseY, pmouseX-25, pmouseY+25, pmouseX+25, pmouseY+25); 
+    triangle(pmouseX, pmouseY, pmouseX-map(3,0,100,0,width), pmouseY+map(3,0,100,0,width), pmouseX+map(3,0,100,0,width), pmouseY+map(3,0,100,0,width)); 
     stroke(0);
   } 
   
     if(mousePressed && mouseX>width/2 && mouseY<height/2){
     fill(c4);
     stroke(c3);
-    triangle(pmouseX, pmouseY, pmouseX-25, pmouseY+25, pmouseX+25, pmouseY+25); 
-    triangle(pmouseX, pmouseY+50, pmouseX-25, pmouseY+75, pmouseX+25, pmouseY+75); 
+    triangle(pmouseX, pmouseY, pmouseX-map(3,0,100,0,width), pmouseY+map(3,0,100,0,width), pmouseX+map(3,0,100,0,width), pmouseY+map(3,0,100,0,width)); 
+    triangle(pmouseX, pmouseY+map(6,0,100,0,width), pmouseX-map(3,0,100,0,width), pmouseY+map(9,0,100,0,width), pmouseX+map(3,0,100,0,width), pmouseY+map(9,0,100,0,width)); 
     stroke(0);
   } 
   
@@ -92,19 +94,19 @@ void draw(){
     if(mousePressed && mouseX>width/2 && mouseY>height/2){
     fill(c6);
     stroke(c5);
-    triangle(pmouseX, pmouseY, pmouseX-25, pmouseY+25, pmouseX+25, pmouseY+25); 
-    triangle(pmouseX, pmouseY+50, pmouseX-25, pmouseY+75, pmouseX+25, pmouseY+75); 
-    triangle(pmouseX, pmouseY+100, pmouseX-25, pmouseY+125, pmouseX+25, pmouseY+125);
+    triangle(pmouseX, pmouseY, pmouseX-map(3,0,100,0,width), pmouseY+map(3,0,100,0,width), pmouseX+map(3,0,100,0,width), pmouseY+map(3,0,100,0,width)); 
+    triangle(pmouseX, pmouseY+map(6,0,100,0,width), pmouseX-map(3,0,100,0,width), pmouseY+map(9,0,100,0,width), pmouseX+map(3,0,100,0,width), pmouseY+map(9,0,100,0,width)); 
+    triangle(pmouseX, pmouseY+map(12,0,100,0,width), pmouseX-map(3,0,100,0,width), pmouseY+map(15,0,100,0,width), pmouseX+map(3,0,100,0,width), pmouseY+map(15,0,100,0,width));
     stroke(0);
   } 
   
     if(mousePressed && mouseX<width/2 && mouseY>height/2){
     fill(c8);
     stroke(c7);
-    triangle(pmouseX, pmouseY, pmouseX-25, pmouseY+25, pmouseX+25, pmouseY+25); 
-    triangle(pmouseX, pmouseY+50, pmouseX-25, pmouseY+75, pmouseX+25, pmouseY+75); 
-    triangle(pmouseX, pmouseY+100, pmouseX-25, pmouseY+125, pmouseX+25, pmouseY+125);
-    triangle(pmouseX, pmouseY+150, pmouseX-25, pmouseY+175, pmouseX+25, pmouseY+175);
+    triangle(pmouseX, pmouseY, pmouseX-map(3,0,100,0,width), pmouseY+map(3,0,100,0,width), pmouseX+map(3,0,100,0,width), pmouseY+map(3,0,100,0,width)); 
+    triangle(pmouseX, pmouseY+map(6,0,100,0,width), pmouseX-map(3,0,100,0,width), pmouseY+map(9,0,100,0,width), pmouseX+map(3,0,100,0,width), pmouseY+map(9,0,100,0,width)); 
+    triangle(pmouseX, pmouseY+map(12,0,100,0,width), pmouseX-map(3,0,100,0,width), pmouseY+map(15,0,100,0,width), pmouseX+map(3,0,100,0,width), pmouseY+map(15,0,100,0,width));
+    triangle(pmouseX, pmouseY+map(18,0,100,0,width), pmouseX-map(3,0,100,0,width), pmouseY+map(21,0,100,0,width), pmouseX+map(3,0,100,0,width), pmouseY+map(21,0,100,0,width));
     stroke(0);
   } 
 
