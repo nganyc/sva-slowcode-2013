@@ -1,5 +1,5 @@
 
-int squiggleRandomSpread = 5;
+int squiggleRandomSpread = 30;
 
 void setup(){
   size(1000,500);
