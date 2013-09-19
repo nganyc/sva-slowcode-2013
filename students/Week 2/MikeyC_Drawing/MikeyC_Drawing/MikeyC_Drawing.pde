@@ -5,7 +5,7 @@
 
 void setup(){
 size(1000, 300);
-background(#C6C6C6);
+background(#E1E1E1);
 smooth();
 
 }
@@ -17,11 +17,11 @@ void draw(){
   line(mouseX, mouseY, pmouseX, pmouseY);
  } 
  else if ((mouseX > width/2) && (mouseY < height/2) && (mousePressed)) 
- {stroke(20, 38, dm*8);strokeWeight(max(35-dm, 1));
+ {stroke(20, dm*8, dm*8);strokeWeight(max(25-dm, 1));
   line(mouseX, mouseY, pmouseX, pmouseY);}
   
   else if ((mouseX < width/2) && (mouseY > height/2) && (mousePressed)) 
- {stroke(10, 98, dm*5);strokeWeight(max(35-dm, 1));
+ {stroke(dm*5, 98, dm*5);strokeWeight(max(30-dm, 1));
   line(mouseX, mouseY, pmouseX, pmouseY);}
   
   else if ((mouseX > width/2) && (mouseY > height/2) && (mousePressed)) 
