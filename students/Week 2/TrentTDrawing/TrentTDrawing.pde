@@ -1,4 +1,3 @@
-boolean click;
 int funky = 100;
 int jazzy = 30;
 int sexy = 60;

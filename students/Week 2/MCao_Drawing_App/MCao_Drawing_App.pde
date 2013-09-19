@@ -81,7 +81,7 @@ void marker() {
      line(borderX,pmouseY,mouseX,mouseY);
   else{
      if(pmouseY>borderY)
-        line(pmouseX,(borderY-5),mouseX,mouseY);
+        line(pmouseX,borderY,mouseX,mouseY);
      else
         line(pmouseX,pmouseY,mouseX,mouseY);
   }
