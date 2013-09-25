@@ -20,34 +20,30 @@ String[] reinManRacing = {
 };
 
 PFont boldFont;
-
 int counter = 0;
-
 PImage img1;
 PImage img2;
 
 void setup(){
+  
   size(1200,700);
   boldFont = loadFont("RBNo2-Light-28.vlw");
   background(80);
   
+  // initial top bar
+  
   noStroke();
-  fill(20);
+  fill(50);
   rect(0,0,width,125);
-
-}
-
-void draw(){
   
   img1 = loadImage("horse_ebooks.png");
   image(img1,width/4-55,7,109,109);
-  
   img2 = loadImage("ReinManRacing.png");
   image(img2,(width/4*3)-55,7,109,109);
-  
-  stroke(255);
-  line(width/2,0,width/2,height);
-  
+
+}
+
+void draw(){ 
   
 }
   
@@ -61,25 +57,26 @@ void keyPressed(){
     
     background(80);
     
-    noStroke();
-    fill(255);
-    rect(0,0,width/2,125);
-    fill(0);
-    rect(width/2+1,0,width,125);
+    // white hightlight for horse_ebooks
     
-    stroke(255);
-    line(width/2,0,width/2,height);
+    noStroke();
+    fill(10);
+    rect(0,0,width/2,125);
+    fill(50);
+    rect(width/2,0,width,125);
     
     img1 = loadImage("horse_ebooks.png");
     image(img1,width/4-55,7,109,109);
+    img2 = loadImage("ReinManRacing.png");
+    image(img2,(width/4*3)-55,7,109,109);
     
-//    noStroke();
-//    fill(0);
-//    rect(0,0,width/2,height);
+    // box for text
     
     stroke(0);
-    fill(100);
+    fill(10);
     rect(hWidth-20,hHeight-20,340,170);
+
+    // tweet text
 
     fill(255);
     textFont(boldFont,28);
@@ -92,6 +89,7 @@ void keyPressed(){
   }
   
   if(key == 'r'){
+    
 //    int randomWord = (int)random(0,words.length);
 
     float rWidth = random(width/2+50,width-340);
@@ -99,23 +97,26 @@ void keyPressed(){
     
     background(80);
   
-    noStroke();
-    fill(0);
-    rect(0,0,width/2,125);
-    fill(255);
-    rect(width/2+1,0,width,125);
+    // white hightlight for ReinManRacing  
   
-    stroke(255);
-    line(width/2,0,width/2,height);
-//    rect((width/4*3)-56,6,110,110);
+    noStroke();
+    fill(50);
+    rect(0,0,width/2,125);
+    fill(10);
+    rect(width/2,0,width,125);
     
-//    noStroke();
-//    fill(0);
-//    rect(width/2,0,width,height);
+    img1 = loadImage("horse_ebooks.png");
+    image(img1,width/4-55,7,109,109);
+    img2 = loadImage("ReinManRacing.png");
+    image(img2,(width/4*3)-55,7,109,109);
+    
+    // box for text
     
     stroke(0);
-    fill(100);
+    fill(10);
     rect(rWidth-20,rHeight-20,340,170);
+    
+    // tweet text
     
     fill(255);
     textFont(boldFont,28);
@@ -125,7 +126,5 @@ void keyPressed(){
     if(counter >= reinManRacing.length) {
       counter = 0;
     }
-    
-    
   }
 }
