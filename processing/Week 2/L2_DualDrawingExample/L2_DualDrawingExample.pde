@@ -1,9 +1,13 @@
 
+<<<<<<< HEAD
+int squiggleRandomSpread = 30;
+=======
 int squiggleRandomSpread = 10;
 int previousX;
 int previousY;
 
 boolean hasClicked;
+>>>>>>> a308ac8f2f0236b543061200cd4069c883f021fe
 
 void setup(){
   size(1000,500);
