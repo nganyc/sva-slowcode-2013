@@ -1,39 +1,131 @@
 
+String[] horseEbooks = {
+"I have personally used this technique to break many memory",
+"AND BURNED BY UNSCRUPULOUS BUSINESSES MORE TIMES","breath, and vice versa. How many of the common things I and others thought we were doing",
+"and more! Start raising your self-esteem today!","Not only that, but whether you believe it (or want to believe it) the car salesmen will continue to laugh",
+"Including simplified four part arrangements for the novice student and",
+"Novice and seasoned tomato growers alike find this section invaluable, as it contains everything you",
+"a friend that people will want to hang out with rather than be forgotten about thanks to some very powerful techniques."
+};
 
-String[] sentences = {"hello there.","welcome to SVA.","how are you?","why are you here, ribbit.?!","beans are magical"};
+String[] reinManRacing = {
+"Spencer rides that fine line between lucky and brilliant. Thought Addictive Dream had it...",
+"Look out for likes of Silver Eagle, Net Work Rouge, Twelve Roses and a certain Harry Topper",
+"He's only gone and done it again. Bondi Beach Boy, the Hunt Ball of the flat",
+"No Nay Never is a beast. Rizeena has run respectably again, looks a solid prospect as she matures. Nuts done on Vorda",
+"The wide draw battle that, incidentally, sky lantern will win. Beat her once and a bigger price. Don't doubt the obvious",
+"As much as the wallet wanted Simenon, thrilled for Estimate and the lady in purple. History made",
+"2013. The year of the draw bias revolt",
+"Producer continues to get hammered on the machine. 100% record here over 7"
+};
+
 PFont boldFont;
 
 int counter = 0;
 
+PImage img1;
+PImage img2;
+
 void setup(){
-  size(1200,800);
-  boldFont = loadFont("dialog.vlw");
+  size(1200,700);
+  boldFont = loadFont("RBNo2-Light-28.vlw");
   background(80);
   
+  noStroke();
+  fill(20);
+  rect(0,0,width,125);
+
 }
 
 void draw(){
-  //background(0);
-}
-
-void mousePressed(){
+  
+  img1 = loadImage("horse_ebooks.png");
+  image(img1,width/4-55,7,109,109);
+  
+  img2 = loadImage("ReinManRacing.png");
+  image(img2,(width/4*3)-55,7,109,109);
+  
+  stroke(255);
+  line(width/2,0,width/2,height);
+  
   
 }
   
 void keyPressed(){
-  if(key == 'g'){
+  if(key == 'h'){
+    
+    float hWidth = random(50,width/2-340);
+    float hHeight = random(170,height-200);
+
     //int randomWord = (int)random(0,words.length);
+    
+    background(80);
+    
+    noStroke();
     fill(255);
-    textFont(boldFont,48);
-    text(sentences[counter],random(0,width), random(0,height));
+    rect(0,0,width/2,125);
+    fill(0);
+    rect(width/2+1,0,width,125);
+    
+    stroke(255);
+    line(width/2,0,width/2,height);
+    
+    img1 = loadImage("horse_ebooks.png");
+    image(img1,width/4-55,7,109,109);
+    
+//    noStroke();
+//    fill(0);
+//    rect(0,0,width/2,height);
+    
+    stroke(0);
+    fill(100);
+    rect(hWidth-20,hHeight-20,340,170);
+
+    fill(255);
+    textFont(boldFont,28);
+    text(horseEbooks[counter], hWidth, hHeight, 300, 300);
     counter ++;
-    if(counter >= sentences.length) {
+    
+    if(counter >= horseEbooks.length) {
       counter = 0;
-      background(80);
     }
   }
   
-  if(key == 'h'){
+  if(key == 'r'){
+//    int randomWord = (int)random(0,words.length);
+
+    float rWidth = random(width/2+50,width-340);
+    float rHeight = random(170,height-200);
+    
+    background(80);
+  
+    noStroke();
+    fill(0);
+    rect(0,0,width/2,125);
+    fill(255);
+    rect(width/2+1,0,width,125);
+  
+    stroke(255);
+    line(width/2,0,width/2,height);
+//    rect((width/4*3)-56,6,110,110);
+    
+//    noStroke();
+//    fill(0);
+//    rect(width/2,0,width,height);
+    
+    stroke(0);
+    fill(100);
+    rect(rWidth-20,rHeight-20,340,170);
+    
+    fill(255);
+    textFont(boldFont,28);
+    text(reinManRacing[counter], rWidth, rHeight, 300, 300);
+    counter ++;
+ 
+    if(counter >= reinManRacing.length) {
+      counter = 0;
+    }
+    
     
   }
 }
