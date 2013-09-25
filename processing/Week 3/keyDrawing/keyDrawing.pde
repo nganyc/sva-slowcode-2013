@@ -65,6 +65,13 @@ void keyPressed(){
     fill(50);
     rect(width/2,0,width,125);
     
+    // line connecting to tweet
+    
+    stroke(255);
+    line((width/4),100,hWidth+20,hHeight-20);
+    
+    // avatars
+    
     img1 = loadImage("horse_ebooks.png");
     image(img1,width/4-55,7,109,109);
     img2 = loadImage("ReinManRacing.png");
@@ -78,7 +85,7 @@ void keyPressed(){
 
     // tweet text
 
-    fill(255);
+    fill(215,245,115);
     textFont(boldFont,28);
     text(horseEbooks[counter], hWidth, hHeight, 300, 300);
     counter ++;
@@ -105,6 +112,13 @@ void keyPressed(){
     fill(10);
     rect(width/2,0,width,125);
     
+    // line connecting to tweet
+    
+    stroke(255);
+    line((width/4*3),100,rWidth+20,rHeight-20);
+    
+    // avatars
+    
     img1 = loadImage("horse_ebooks.png");
     image(img1,width/4-55,7,109,109);
     img2 = loadImage("ReinManRacing.png");
@@ -118,7 +132,7 @@ void keyPressed(){
     
     // tweet text
     
-    fill(255);
+    fill(255,150,100);
     textFont(boldFont,28);
     text(reinManRacing[counter], rWidth, rHeight, 300, 300);
     counter ++;
