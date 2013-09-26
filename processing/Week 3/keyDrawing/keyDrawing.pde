@@ -1,6 +1,7 @@
 
+
 String[] dialogueA = {"make me sandwich","300","I'll give you this shiny thing","you sure?"};
-String[] dialogueB = {"how many sandwiches?","why should I?","deal!","of course!"};
+String[] dialogueB = {"how many sandwiches?","why should I?","deal!","totally, i'll blog about it"};
 PFont boldFont;
 int i;
 int j;
@@ -18,9 +19,10 @@ void keyPressed(){
 
   if(key == 'a'){
     talkingHead(110, 110);
-    fill(255);
-    textFont(boldFont,48);
-    text(dialogueA[i], random(width), random(height/2));
+    fill(0);
+    textAlign(LEFT);
+    textFont(boldFont,38);
+    text(dialogueA[i], random(width/3), random(height));
     i++;
       if(i == dialogueA.length) {
       i = 0;
@@ -31,8 +33,9 @@ void keyPressed(){
   if(key == 'l'){
     talkingHead(1020, 110);
     fill(255);
-    textFont(boldFont,48);
-    text(dialogueB[j], random(width), random(height));
+    textAlign(RIGHT);
+    textFont(boldFont,38);
+    text(dialogueB[j], random(width), random(height/2));
     j++;
       if(j == dialogueB.length) {
       j = 0;
