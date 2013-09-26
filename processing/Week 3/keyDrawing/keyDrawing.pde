@@ -1,9 +1,10 @@
 
 
-String[] sentences = {"hello there.","welcome to SVA.","how are you?","why are you here, ribbit.?!","beans are magical"};
+String[] puncs = {"a!","b?","?!","#$%","...","~"};
 PFont boldFont;
 
-int counter = 0;
+int h1 = 120;
+int h2 = 240;
 
 void setup(){
   size(1200,800);
@@ -21,21 +22,33 @@ void mousePressed(){
 }
   
 void keyPressed(){
-  if(key == 'g'){
-    //int randomWord = (int)random(0,words.length);
+  if(key == 'a'){
+  int randomPunc = (int)random(0,puncs.length);
     fill(255);
     textFont(boldFont,48);
-    text(sentences[counter],random(0,width), random(0,height));
-    counter ++;
-    if(counter >= sentences.length) {
-      counter = 0;
+    text(puncs[randomPunc], width/4, h1);
+    h1 += 120;
+//    background(80);
+    
+    if(h1 >= height) {
+      h1 = 120;
       background(80);
     }
   }
   
-  if(key == 'h'){
-    
+  if (key == 'b') {
+  int randomPunc = (int)random(0,puncs.length);
+  fill(255);
+  textFont(boldFont,48);
+//    background(255);
+  text(puncs[randomPunc], width*3/4, h2);
+  h2 += 120;
+  if(h2 >= height) {
+    h2 = 120;
+    background(80);
   }
+}
+
 }
 
 
@@ -52,7 +65,7 @@ void keyPressed(){
 //1. get 2 random numbers a and b from the array numberPool
 
 //2. display string "What is" + a + "+" + b + "?"
-}
+//}
 
 //void keyPressed(){
 
