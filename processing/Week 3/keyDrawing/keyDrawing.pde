@@ -1,3 +1,11 @@
+// Conversation sketch using 'human spambots'
+// Famous spambot @Horse_ebooks was revealed to be a human art project this week
+// I find horse racing pundit (and old friend) @ReinManRacing to mostly be as absurd and incomprehendable
+
+// Press H to show @Horse_ebooks tweets
+// Press R to show @ReinManRacing tweet
+// Press Space to show random combination of the two
+// I wanted to go further with mixing up the tweets (mixing words not just combining the two tweets, and retaining the colors. I couldn't figure this out!
 
 String[] horseEbooks = {
 "I have personally used this technique to break many memory",
@@ -18,9 +26,6 @@ String[] reinManRacing = {
 "2013. The year of the draw bias revolt",
 "Producer continues to get hammered on the machine. 100% record here over 7"
 };
-
-//String horseSnippet = horseEbooks.substring(0,5);
-//String reinSnippet = reinManRacing.substring(0,5);
 
 PFont boldFont;
 int counter = 0;
@@ -89,7 +94,6 @@ void keyPressed(){
     image(img1,width/4-55,7,109,109);
     img2 = loadImage("ReinManRacing.png");
     image(img2,(width/4*3)-55,7,109,109);
-    
     
     imgH = loadImage("H.png");
     image(imgH,width/4-215,22,80,80);
@@ -220,12 +224,6 @@ void keyPressed(){
     float rCounterFloat2 = random(0,7);
     int rCounter1 = int(rCounterFloat1);
     int rCounter2 = int(rCounterFloat2);
- 
-//    String H = horseEbooks[rCounter1];
-//    String R = reinManRacing[rCounter2];
-//    String [] randomHR = {"H","R"};
-//    float randomOutput = random(0,1);
-//    int randomO = int(randomOutput);
     
     fill(200);
     textFont(boldFont,28);
@@ -234,9 +232,5 @@ void keyPressed(){
     rCounter1 ++;
     rCounter2 ++;
      
-//    if(rCounter >= 7) {
-//    rCounter = 0;
-//    }
-
   }  
 }
