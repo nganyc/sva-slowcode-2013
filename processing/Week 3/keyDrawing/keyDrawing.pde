@@ -1,3 +1,8 @@
+//Alternate pressing the keys "r" and "p" to read the conversation between Rachel and Phoebe.
+
+PImage rachelImg;
+PImage phoebeImg;
+
 String[] rachel = {"OK, ready? Hi.","Rachel","Phoebe's","Leave","I just said Leave","That's not true","No. I have all the good words."};
 PFont firstFont;
 
@@ -7,11 +12,14 @@ PFont secondFont;
 int counter = 0;
 
 void setup(){
+  rachelImg = loadImage("rachel.jpg");
+  phoebeImg = loadImage("phoebe.jpg");
+
+
   size(1300,700);
   firstFont = loadFont("Didot-32.vlw");
   secondFont = loadFont("dialog.vlw");
 
-  
   background(255,0,0);
   
 }
@@ -39,6 +47,8 @@ void keyPressed(){
     if(counter >= rachel.length) {
       counter = 0;
       //background(0,0,255);
+      image(rachelImg, 0, 0);
+
     }
   }
   
@@ -55,7 +65,8 @@ void keyPressed(){
     if(counter >= phoebe.length) {
       counter = 0;
       //background(0,255,0);
-    
+     image(phoebeImg, width/2, height/2);
+
   }
 }
 }
