@@ -1,5 +1,4 @@
 
-
 String[] dialogueA = {"make me sandwich","300","I'll give you this shiny thing","you sure?"};
 String[] dialogueB = {"how many sandwiches?","why should I?","deal!","of course!"};
 PFont boldFont;
@@ -42,6 +41,8 @@ void keyPressed(){
 }
 void mousePressed(){
   background(204);
+  i=0;
+  j=0;
 
   }
 void talkingHead(int x, int y) {
