@@ -1,14 +1,18 @@
+String[] rachel = {"OK, ready? Hi.","Rachel","Phoebe's","Leave","I just said Leave","That's not true","No. I have all the good words."};
+PFont firstFont;
 
-
-String[] sentences = {"hello there.","welcome to SVA.","how are you?","why are you here, ribbit.?!","beans are magical"};
-PFont boldFont;
+String[] phoebe = {"It's","And","And","Please","Yeah, that's because you have all the good words.","Let's switch"};
+PFont secondFont;
 
 int counter = 0;
 
 void setup(){
-  size(1200,800);
-  boldFont = loadFont("dialog.vlw");
-  background(80);
+  size(1300,700);
+  firstFont = loadFont("Didot-32.vlw");
+  secondFont = loadFont("dialog.vlw");
+
+  
+  background(255,0,0);
   
 }
 
@@ -21,19 +25,37 @@ void mousePressed(){
 }
   
 void keyPressed(){
-  if(key == 'g'){
+  if(key == 'r'){
     //int randomWord = (int)random(0,words.length);
+    
+    fill(0,0,255);
+    noStroke();
+    rect(0,0,width,height/2);
+  
     fill(255);
-    textFont(boldFont,48);
-    text(sentences[counter],random(0,width), random(0,height));
+    textFont(firstFont,40);
+    text(rachel[counter],random(0,width), random(0,height/2));
     counter ++;
-    if(counter >= sentences.length) {
+    if(counter >= rachel.length) {
       counter = 0;
-      background(80);
+      //background(0,0,255);
     }
   }
   
-  if(key == 'h'){
+  if(key == 'p'){
+    
+    fill(0,255,0);
+    noStroke();
+    rect(0,height/2,width,height/2);
+    
+    fill(0);
+    textFont(secondFont,40);
+    text(phoebe[counter],random(0,width), random(height/2,height));
+    counter ++;
+    if(counter >= phoebe.length) {
+      counter = 0;
+      //background(0,255,0);
     
   }
+}
 }
