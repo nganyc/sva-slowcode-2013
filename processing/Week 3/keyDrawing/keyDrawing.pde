@@ -26,6 +26,9 @@ PFont boldFont;
 int counter = 0;
 PImage img1;
 PImage img2;
+PImage imgH;
+PImage imgR;
+PImage imgSpace;
 
 void setup(){
   
@@ -44,10 +47,19 @@ void setup(){
   img2 = loadImage("ReinManRacing.png");
   image(img2,(width/4*3)-55,7,109,109);
 
+  imgH = loadImage("H.png");
+  image(imgH,width/4-215,22,80,80);
+  
+  imgR = loadImage("R.png");
+  image(imgR,width-170,22,80,80);
+  
+  imgSpace = loadImage("space.png");
+  image(imgSpace,width/2-90,22,180,80);
+
 }
 
 void draw(){ 
-  
+
 }
   
 void keyPressed(){
@@ -55,8 +67,6 @@ void keyPressed(){
     
     float hWidth = random(50,width/2-340);
     float hHeight = random(170,height-200);
-
-    //int randomWord = (int)random(0,words.length);
     
     background(80);
     
@@ -73,12 +83,22 @@ void keyPressed(){
     stroke(255);
     line((width/4),100,hWidth+20,hHeight-20);
     
-    // avatars
+    // images
     
     img1 = loadImage("horse_ebooks.png");
     image(img1,width/4-55,7,109,109);
     img2 = loadImage("ReinManRacing.png");
     image(img2,(width/4*3)-55,7,109,109);
+    
+    
+    imgH = loadImage("H.png");
+    image(imgH,width/4-215,22,80,80);
+    
+    imgR = loadImage("R.png");
+    image(imgR,width-170,22,80,80);
+    
+    imgSpace = loadImage("space.png");
+    image(imgSpace,width/2-90,22,180,80);
     
     // box for text
     
@@ -99,8 +119,6 @@ void keyPressed(){
   }
   
   if(key == 'r'){
-    
-//    int randomWord = (int)random(0,words.length);
 
     float rWidth = random(width/2+50,width-340);
     float rHeight = random(170,height-200);
@@ -120,12 +138,22 @@ void keyPressed(){
     stroke(255);
     line((width/4*3),100,rWidth+20,rHeight-20);
     
-    // avatars
+    // images
     
     img1 = loadImage("horse_ebooks.png");
     image(img1,width/4-55,7,109,109);
     img2 = loadImage("ReinManRacing.png");
     image(img2,(width/4*3)-55,7,109,109);
+    
+      
+    imgH = loadImage("H.png");
+    image(imgH,width/4-215,22,80,80);
+    
+    imgR = loadImage("R.png");
+    image(imgR,width-170,22,80,80);
+    
+    imgSpace = loadImage("space.png");
+    image(imgSpace,width/2-90,22,180,80);
     
     // box for text
     
@@ -146,8 +174,6 @@ void keyPressed(){
   }
   
     if(key == ' '){
-    
-//    int randomWord = (int)random(0,horseEbooks.length);
 
     float sWidth = random(50,width-340);
     float sHeight = random(170,height-200);
@@ -166,18 +192,27 @@ void keyPressed(){
     line((width/4*3),100,sWidth+20,sHeight-20);
     line((width/4),100,sWidth+20,sHeight-20);
     
-    // avatars
+    // images
     
     img1 = loadImage("horse_ebooks.png");
     image(img1,width/4-55,7,109,109);
     img2 = loadImage("ReinManRacing.png");
     image(img2,(width/4*3)-55,7,109,109);
     
+    imgH = loadImage("H.png");
+    image(imgH,width/4-215,22,80,80);
+    
+    imgR = loadImage("R.png");
+    image(imgR,width-170,22,80,80);
+    
+    imgSpace = loadImage("space.png");
+    image(imgSpace,width/2-90,22,180,80);
+    
     // box for text
     
     stroke(0);
     fill(10);
-    rect(sWidth-20,sHeight-20,340,225);
+    rect(sWidth-20,sHeight-20,340,250);
     
     // tweet text  
     
@@ -185,6 +220,12 @@ void keyPressed(){
     float rCounterFloat2 = random(0,7);
     int rCounter1 = int(rCounterFloat1);
     int rCounter2 = int(rCounterFloat2);
+ 
+//    String H = horseEbooks[rCounter1];
+//    String R = reinManRacing[rCounter2];
+//    String [] randomHR = {"H","R"};
+//    float randomOutput = random(0,1);
+//    int randomO = int(randomOutput);
     
     fill(200);
     textFont(boldFont,28);
@@ -196,5 +237,6 @@ void keyPressed(){
 //    if(rCounter >= 7) {
 //    rCounter = 0;
 //    }
+
   }  
 }
