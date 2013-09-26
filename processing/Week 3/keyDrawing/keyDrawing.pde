@@ -1,6 +1,6 @@
 
 
-String[] puncs = {"a!","b?","?!","#$%","...","~"};
+String[] puncs = {"!","?","?!","#$%","...","~"};
 PFont boldFont;
 
 int h1 = 120;
@@ -23,13 +23,20 @@ void mousePressed(){
   
 void keyPressed(){
   if(key == 'a'){
-  int randomPunc = (int)random(0,puncs.length);
-    fill(255);
-    textFont(boldFont,48);
-    text(puncs[randomPunc], width/4, h1);
-    h1 += 120;
-//    background(80);
+    int randomPunc = (int)random(0,puncs.length);
     
+    noStroke();
+    fill(255);
+    ellipseMode(CENTER);
+    ellipse(width/4, h1,100,100);
+    
+    fill(80);
+    textFont(boldFont,48);
+//    background(255);
+    textAlign(CENTER);
+    text(puncs[randomPunc], width/4, h1);
+    
+    h1 += 120;
     if(h1 >= height) {
       h1 = 120;
       background(80);
@@ -38,13 +45,21 @@ void keyPressed(){
   
   if (key == 'b') {
   int randomPunc = (int)random(0,puncs.length);
-  fill(255);
-  textFont(boldFont,48);
+  
+    noStroke();
+    fill(255);
+    ellipseMode(CENTER);
+    ellipse(width*3/4, h2,100,100);
+    
+    fill(80);
+    textFont(boldFont,48);
 //    background(255);
-  text(puncs[randomPunc], width*3/4, h2);
+    textAlign(CENTER);
+    text(puncs[randomPunc], width*3/4, h2);
+    
   h2 += 120;
   if(h2 >= height) {
-    h2 = 120;
+    h2 = 240;
     background(80);
   }
 }
