@@ -14,12 +14,12 @@ void setup(){
   boldFontA = loadFont("BodoniMT-BoldItalic-48.vlw");
   boldFontB = loadFont("CalifornianFB-Bold-48.vlw");
   background(#000000);
-  
-  personA();
-  personB();
 }
 
 void draw(){
+  smooth();
+  personA();
+  personB();
 }
 
 void mousePressed(){
