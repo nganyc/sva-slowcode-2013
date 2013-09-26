@@ -1,5 +1,4 @@
 
-
 String[] sentences = {"hello there.","welcome to SVA.","how are you?","why are you here, ribbit.?!","beans are magical"};
 PFont boldFont;
 
