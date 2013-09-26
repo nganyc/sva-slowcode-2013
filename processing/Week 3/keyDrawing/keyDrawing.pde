@@ -51,7 +51,12 @@ image(scene11, 600,0);
 image(end, 0,0);
 }
 
-
+ // Adding in a function
+ void BlueSquare() { 
+   fill(#19b1fd);
+   noStroke();
+   rect(300, 100, 200, 200);
+ }
 
   
 void keyPressed() {
@@ -70,9 +75,7 @@ void keyPressed() {
   
    if (key == '3'){
    scene3.play();
-   fill(#19b1fd);
-   noStroke();
-   rect(300, 100, 200, 200);
+   BlueSquare();
    }
   
    if (key == '4')
@@ -99,9 +102,7 @@ void keyPressed() {
     // if (isPlaying) {scene6.play();}
     // isPlaying = !isPlaying; 
     scene6.play();
-   fill(#19b1fd);
-   noStroke();
-   rect(300, 100, 200, 200);
+    BlueSquare();
     }
     
       if (key == '7'){
@@ -122,9 +123,7 @@ void keyPressed() {
   
    if (key == '9'){
    scene9.play();
-   fill(#19b1fd);
-   noStroke();
-   rect(300, 100, 200, 200);
+   BlueSquare();
    }
   
    if (key == 'q')
